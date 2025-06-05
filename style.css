@@ -1,0 +1,6 @@
+body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+nav { background: #333; padding: 0.5em; text-align: center; }
+nav a { color: #fff; margin: 0 1em; text-decoration: none; }
+header, section { padding: 1em; max-width: 800px; margin: auto; }
+h1, h2 { color: #222; }
+footer { text-align: center; font-size: 0.8em; padding: 1em; background: #f4f4f4; }
