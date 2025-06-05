@@ -19704,4 +19704,17 @@ body.white-version .rn-btn-ulderline {
 .white-version .slider-style-6 .cd-headline span {
   color: var(--color-white) !important;
 }
+.header-left .header-thumbnail img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  object-fit: contain !important;
+}
+
+.background-image-area .thumbnail-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* ensure it fits within container */
+}
 /*# sourceMappingURL=../maps/style.css.map */
