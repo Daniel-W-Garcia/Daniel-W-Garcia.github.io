@@ -434,6 +434,35 @@
 
     }
     imJs.m();
+    // Video-on-hover for Unity logo
+    $(document).ready(function () {
+        $('.experience-image').each(function () {
+            var $el = $(this);
+            var $video = $el.find('.unity-video').get(0);
+            $el.on('mouseenter', function () {
+                if ($video) $video.play();
+            });
+            $el.on('mouseleave', function () {
+                if ($video) {
+                    $video.pause();
+                    $video.currentTime = 0;
+                }
+            });
+        });
+    });
+    
+    $('.experience-footer').each(function () {
+        var $footer = $(this);
+        var $video = $footer.find('.footer-hover-video').get(0);
+        $footer.on('mouseenter', function () {
+            if ($video) $video.play();
+        });
+        $footer.on('mouseleave', function () {
+            if ($video) { $video.pause(); $video.currentTime = 0; }
+        });
+    });
+
+
 
 
 })(jQuery, window)

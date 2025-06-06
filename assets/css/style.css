@@ -19717,4 +19717,58 @@ body.white-version .rn-btn-ulderline {
   display: block;
   object-fit: contain; /* ensure it fits within container */
 }
+.logo a img {
+  width: 80px; /* adjust size here */
+  height: 80px; /* keep same for circle */
+  object-fit: cover; /* fill as needed */
+  border-radius: 50%; /* make it a circle */
+  overflow: hidden; /* hide outside parts if any */
+}
+
+/* ---- For Unity logo & video swap in experience-image ---- */
+.experience-image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.unity-logo, .unity-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+.unity-video { opacity: 0; pointer-events: none; }
+.experience-image:hover .unity-logo { opacity: 0; }
+.experience-image:hover .unity-video { opacity: 1; pointer-events: auto; }
+
+/* ---- For hover video in custom experience-footer ---- */
+/* Use only on the video footer area; add 'video-container' to the HTML */
+.experience-footer.video-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.footer-hover-video {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: filter 0.3s, opacity 0.3s;
+  filter: grayscale(40%);
+  opacity: 0.8;
+}
+.experience-footer.video-container:hover .footer-hover-video {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ---- Restore normal appearance for all other buttons in .experience-footer ---- */
+.experience-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+  /* No width/height here! */
+}
+
+
 /*# sourceMappingURL=../maps/style.css.map */
